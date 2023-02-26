@@ -16,7 +16,7 @@ def remove_from_cart(request, pk):
     products = Product.objects.get(pk=pk)
     ncart = Cart.objects.get(products=products)
     ncart.delete()
-    return HttpResponseRedirect(request.path_info)
+    return HttpResponseRedirect(reverse("cart"))
 
 @login_required()
 def cart(request):
