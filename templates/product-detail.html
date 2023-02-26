@@ -1,0 +1,65 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<!-- ============================ COMPONENT 1 ================================= -->
+<div class="card"style="border:none; background:transparent">
+  <div class="row no-gutters">
+    <aside class="col-md-6" style="border-radius:50px">
+      <article class="gallery-wrap" style="border-radius:50px">
+        <div class="img-big-wrap" style="border-radius:50px">
+          <a href="#"><img src="{{ product.image.url }}" /></a>
+        </div>
+      </article>
+    </aside>
+    <main class=" col-md-6  bg-body " style="background:rgba(0,0,0,0);">
+      <article class="content-body">
+        <h2 class="title text-white">{{ product.name }}</h2>
+
+        <div class="mb-3">
+          <var class="text-white price h4">₹ {{ product.price }}</var>
+        </div>
+
+        <p class="text-white">
+			{{ product.description }}	
+        </p>
+
+        <hr />
+        <!-- row.// -->
+        <div class="row">
+          <div class="item-option-select">
+            <h6 class="text-white">Select Size</h6>
+            <div
+              class="btn-group btn-group-sm btn-group-toggle"
+              data-toggle="buttons"
+            >
+              <label class="btn btn-light">
+                <input type="radio" name="radio_color" /> S
+              </label>
+              <label class="btn btn-light light">
+                <input type="radio" name="radio_color" checked /> M
+              </label>
+              <label class="btn btn-light">
+                <input type="radio" name="radio_color" /> L
+              </label>
+              <label class="btn btn-light">
+                <input type="radio" name="radio_color" /> XL
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- row.// -->
+        <hr />
+        <a href="{% url 'add_to_cart' product.pk %}" class="btn btn-primary">
+          <span class="text">Add to cart</span>
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </article>
+      <!-- product-info-aside .// -->
+    </main>
+    <!-- col.// -->
+  </div>
+  <!-- row.// -->
+</div>
+<!-- card.// -->
+
+{% endblock content %}

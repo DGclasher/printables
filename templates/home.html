@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+    
+
+<div class="home_container">
+
+    <div class="text">
+    <p class="customised">Customised</p>
+    <p class="customised2">Stickers, Shirts and <br>much more.</p>
+    <a href="{% url 'products' %}">
+    <button class="order_btn">Order Now</button>
+    </a>
+    </div>
+
+    <div class="images">
+        <img class="posters" src="{% static 'images/home/posters.png' %}" alt="poster image">
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
+
+{% endblock  %} 
