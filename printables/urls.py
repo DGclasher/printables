@@ -16,6 +16,7 @@ urlpatterns = [
     path('products/t-shirs/', views.t_shirts, name="t_shirts"),
     path('products/customise/', views.customise, name="customise"),
     path('add_product/<int:pk>', category_views.add_to_cart, name="add_to_cart"),
-    path('remove_product/<int:pk>', category_views.remove_from_cart, name="remove_from_cart")
+    path('remove_product/<int:pk>', category_views.remove_from_cart, name="remove_from_cart"),
+    path('cart/', category_views.cart, name="cart")
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) 
 
