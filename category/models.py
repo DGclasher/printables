@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Category(models.Model):
     name = models.CharField(max_length=50, unique=True)
@@ -22,3 +23,21 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+    
+class CustomUpload(models.Model):
+    caption = models.CharField(max_length=200)
+    SIZE_SELECT = (
+        ('0','S'), 
+        ('1','M'), 
+        ('2','L')
+    )
+    size = models.CharField(max_length=11, choices=SIZE_SELECT)
+    image = models.ImageField(upload_to='photos/custom')
+
+    def __str__(self):
+        return self.caption
+    
+class Cart(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    products = models.ForeignKey(Product, on_delete=models.CASCADE)
+    
