@@ -2,27 +2,28 @@
 
 <div class="row">
   <aside class="col-lg-9">
-    <div class="card">
-      <table class="table table-borderless table-shopping-cart">
+    <div class="card" style="border:none;background:none">
+      <table class="table table-borderless table-shopping-cart" style="border:none;background:none;border-radius:10px">
         <thead class="text-muted">
-          <tr class="small text-uppercase">
-            <th scope="col">Product</th>
-            <th scope="col" width="120">Quantity</th>
-            <th scope="col" width="120">Price</th>
-            <th scope="col" class="text-right" width="200"></th>
+          <tr class="small text-uppercase" style="border:none;background:none">
+            <th scope="col" class="text-white">Product</th>
+            <th scope="col" class="text-white" width="120">Quantity</th>
+            <th scope="col"class="text-white" width="120">Price</th>
+            <th scope="col" class="text-white" class="text-right" width="200"></th>
           </tr>
         </thead>
         <tbody>
           {% for cart_item in cart_items %}
 
-          <tr>
+          <tr  style="background: rgb(255,255,255);
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.068) 0%, rgba(120,120,120,0) 100%); border:none; margin-bottom: 3px; ">
             <td>
               <figure class="itemside align-items-center">
                 <div class="aside">
                   <img src="{{ cart_item.products.image.url }}" class="img-sm" />
                 </div>
                 <figcaption class="info">
-                  <a href="#" class="title text-dark"
+                  <a href="#" class="title text-white"
                     >{{ cart_item.products.name }}</a
                   >
                 </figcaption>
@@ -55,7 +56,7 @@
             </td>
             <td>
               <div class="price-wrap">
-                <var class="price">{{cart_item.products.price}}</var>
+                <var class="price text-white">₹ {{cart_item.products.price}}</var>
               </div>
             </td>
             <td class="text-right">
@@ -68,18 +69,16 @@
       </table>
     </div>
   </aside>
-  <aside class="col-lg-3">
-    <div class="card">
-      <div class="card-body">
+  <aside class="col-lg-3 " style="background: none; border:none; margin-top:30px">
+    <div class="card" style="background: none; border:none ">
+      <div class="card-body" style="background: #ffffff56; border:none ;border-radius :10px">
         <dl class="dlist-align">
-          <dt>Total price:</dt>
-          <dd class="text-right">${{total_price}}</dd>
+          <dt class="text-white">Total price:</dt>
+          <dd class="text-right text-white">${{total_price}}</dd>
         </dl>
         <hr />
-        <p class="text-center mb-3">
-          <img src="./images/misc/payments.png" height="26" />
-        </p>
-        <a href="./place-order.html" class="btn btn-primary btn-block">
+        
+        <a href="./place-order.html" class="btn btn-dark btn-block">
           Checkout
         </a>
         <a href="./store.html" class="btn btn-light btn-block"
