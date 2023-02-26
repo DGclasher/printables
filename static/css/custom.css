@@ -71,6 +71,7 @@ background: linear-gradient(90deg, rgb(3, 0, 22) 0%, rgb(0, 0, 0) 100%);
     text-align: center;
     justify-content: flex-end;
     width: 30vw;
+    background-color: #ffffff56;
 }
 
 .text{
