@@ -11,6 +11,7 @@
         <i class="fa fa-bars"></i> All category
       </button>
       <div class="dropdown-menu">
+        <a class="dropdown-item" href="{% url 'products' %}">All </a>
         <a class="dropdown-item" href="{% url 'stickers' %}">Sticker </a>
 
         <a class="dropdown-item" href="{% url 'posters' %}">Poster </a>
@@ -44,7 +45,7 @@
     </div>
 
     <div class="cart-div">
-      <a href="./cart.html" class="widget-header pl-3 ml-3">
+      <a href="{% url 'cart' %}" class="widget-header pl-3 ml-3">
         <ion-icon class="cart-icon" name="cart-outline"></ion-icon>
         {% comment %}
         <span class="badge badge-pill badge-danger notify">0</span> {%
