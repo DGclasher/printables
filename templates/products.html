@@ -29,7 +29,7 @@
 			<figcaption class=" info-wrap " style="background:black; border:none;color:white">
 				<a href="{% url 'product' product.pk %}" class="title text-white">{{product.name}}</a>
 				<div class="text-white price mt-1">₹{{product.price}}</div> 
-				<a href="./product-detail.html" class="btn btn-dark " style="float:right">
+				<a href="{% url 'add_to_cart' product.pk %}" class="btn btn-dark " style="float:right">
 					<span class="text text-white">Add to cart</span>
 					<i class="fas fa-shopping-cart"></i>
 				  </a>
