@@ -20,13 +20,11 @@ Printable is a onestop solutions for all your printing needs. From posters to st
  - [x] Font awesome    
 ## Sections
 - [x] All categories
-## Screenshots of the website
+## SneakPeek of the website
 #### **1** Home page
  ![Screenshot from 2023-02-26 10-10-12](https://user-images.githubusercontent.com/69218962/221392799-e0b49cbc-cc30-4751-922c-c3475c6878a8.png)
 #### **2** Product page
  ![Screenshot from 2023-02-26 10-10-21](https://user-images.githubusercontent.com/69218962/221392948-ddcbced8-8c7d-49c8-a0f3-ab8f27a3d0e5.png)
-#### **3** Register and login page
- ![Screenshot from 2023-02-26 10-11-35](https://user-images.githubusercontent.com/69218962/221393024-b8f5d747-05eb-4ba0-9053-cb41e4936ff2.png)
-#### **4** Product check out page
+#### **3** Product check out page
  ![Screenshot from 2023-02-26 10-10-57](https://user-images.githubusercontent.com/69218962/221393054-58648f03-449b-407f-b072-518b34de53c8.png)
 
